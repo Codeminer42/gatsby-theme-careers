@@ -5,13 +5,13 @@ module.exports = {
     author: '',
   },
   plugins: [
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/jobs`,
-        name: `markdown-pages`,
+        path: `${__dirname}/data/jobs`,
+        name: 'data',
       },
     },
-    `gatsby-transformer-remark`,
   ],
 }

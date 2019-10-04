@@ -2,19 +2,17 @@ const path = require('path')
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const jobTemplate = path.resolve('src/templates/jobTemplate.js')
+  const JobTemplate = path.resolve('src/templates/job.js')
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___path] }
+      allJobsJson(
+        sort: { order: ASC, fields: [path] }
         limit: 1000
       ) {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            path
           }
         }
       }
@@ -26,10 +24,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allJobsJson.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
-      component: jobTemplate,
+      path: node.path,
+      component: JobTemplate,
       context: {},
     })
   })
