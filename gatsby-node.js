@@ -5,11 +5,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const JobTemplate = path.resolve('src/templates/job.js')
 
   const result = await graphql(`
-    {
-      allJobsJson(
-        sort: { order: ASC, fields: [path] }
-        limit: 1000
-      ) {
+    query CreatePagesQuery {
+      allJobsJson(sort: { order: ASC, fields: [path] }) {
         edges {
           node {
             path
