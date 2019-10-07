@@ -6,7 +6,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Fragment>
-      <h1>Codeminer42 Careers</h1>
+      <h1>CompanyName Careers</h1>
 
       {jobs.edges.length > 0 ? (
         <ul>

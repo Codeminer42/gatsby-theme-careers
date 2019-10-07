@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Codeminer42 - Careers',
+    title: 'Careers | CompanyName',
     description: '',
     author: '',
   },

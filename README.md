@@ -1,6 +1,6 @@
 # careers 👷
 
-> Codeminer42 careers page.
+> Static site for listing open positions.
 
 ## Install
 
