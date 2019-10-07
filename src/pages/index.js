@@ -3,12 +3,13 @@ import { graphql, Link } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   const { jobs } = data
+  const hasJobs = jobs.edges.length > 0
 
   return (
     <Fragment>
       <h1>CompanyName Careers</h1>
 
-      {jobs.edges.length > 0 ? (
+      {hasJobs ? (
         <ul>
           {jobs.edges.map((edge) => {
             const job = edge.node
