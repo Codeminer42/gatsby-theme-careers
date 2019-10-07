@@ -6,10 +6,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     query CreatePagesQuery {
-      allJobsJson(sort: { order: ASC, fields: [path] }) {
+      allContentfulJob(sort: { order: ASC, fields: [slug] }) {
         edges {
           node {
-            path
+            slug
+            title
+            body {
+              body
+            }
+            tags {
+              name
+            }
           }
         }
       }
@@ -21,11 +28,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allJobsJson.edges.forEach(({ node }) => {
+  result.data.allContentfulJob.edges.forEach(({ node }) => {
     createPage({
-      path: node.path,
+      path: `/jobs/${node.slug}`,
       component: JobTemplate,
-      context: {},
+      context: {
+        slug: node.slug,
+      },
     })
   })
 }
