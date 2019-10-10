@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import Tag from '../components/tag'
+import TagList from '../components/TagList'
 
-export default function Job({ data }) {
+const Job = ({ data }) => {
   const job = data.contentfulJob
 
   return (
@@ -12,11 +12,7 @@ export default function Job({ data }) {
       <Link to='/'>Back</Link>
       <h1>{job.title}</h1>
 
-      {job.tags.map((tag) => {
-        return (
-          <Tag key={tag.name} {...tag} />
-        )
-      })}
+      <TagList tags={job.tags} />
 
       <div>
         {job.body && documentToReactComponents(job.body.json)}
@@ -38,3 +34,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Job

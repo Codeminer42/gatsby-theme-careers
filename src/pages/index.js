@@ -2,7 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Flex, Heading, Text } from 'flokit'
 import { BackgroundImage, Container, Image, Link } from '../components'
-import Tag from '../components/tag'
+
+import TagList from '../components/TagList'
+import JobCard from '../components/JobCard'
 
 const Header = () => (
   <Box
@@ -112,13 +114,10 @@ const IndexPage = ({ data }) => {
                 const job = edge.node
 
                 return (
-                  <li key={job.slug}>
+                  <JobCard tag={'li'} key={job.slug}>
                     <Link to={`/jobs/${job.slug}`}>{job.title}</Link>
-
-                    {job.tags.map((tag) => {
-                      return <Tag key={tag.name} {...tag} />
-                    })}
-                  </li>
+                    <TagList tags={job.tags} />
+                  </JobCard>
                 )
               })}
             </ul>
