@@ -14,4 +14,6 @@ module.exports = function (migration) {
     .required(true)
     .name('Slug')
     .validations([{ unique: true }])
+
+  tag.changeFieldControl('slug', 'builtin', 'slugEditor')
 }

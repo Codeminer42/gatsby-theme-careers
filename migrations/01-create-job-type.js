@@ -15,6 +15,8 @@ module.exports = function (migration) {
     .name('Slug')
     .validations([{ unique: true }])
 
+  job.changeFieldControl('slug', 'builtin', 'slugEditor')
+
   job.createField('body')
     .type('RichText')
     .required(true)
