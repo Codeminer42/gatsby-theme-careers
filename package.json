@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "node_modules/.bin/gatsby develop",
-    "build": "node_modules/.bin/gatsby build",
-    "serve": "node_modules/.bin/gatsby serve",
-    "format": "node_modules/.bin/prettier --write \"**/*.{js,jsx,json,md}\"",
-    "migrate": "node scripts/migrate.js",
+    "dev": "gatsby develop",
     "start": "yarn dev",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "migrate": "node scripts/migrate.js"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
