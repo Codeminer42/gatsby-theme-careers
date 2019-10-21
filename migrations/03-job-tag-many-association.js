@@ -1,14 +1,27 @@
-module.exports = function (migration) {
-  const job = migration.editContentType('job')
-  const tag = migration.editContentType('tag')
+const { upsertContentType, upsertField } = require('./utils')
 
-  job.createField('tags')
+module.exports = async function(migration) {
+  const job = await upsertContentType(migration, 'job')
+  const tag = await upsertContentType(migration, 'tag')
+
+  const tagsField = await upsertField(job, 'tags')
+  const jobsField = await upsertField(tag, 'jobs')
+
+  tagsField
     .type('Array')
     .name('Tags')
-    .items({ type: 'Link', linkType: 'Tag' })
+    .items({
+      type: 'Link',
+      linkType: 'Entry',
+      validations: [{ linkContentType: ['tag'] }],
+    })
 
-  tag.createField('jobs')
+  jobsField
     .type('Array')
     .name('Jobs')
-    .items({ type: 'Link', linkType: 'Job' })
+    .items({
+      type: 'Link',
+      linkType: 'Entry',
+      validations: [{ linkContentType: ['job'] }],
+    })
 }

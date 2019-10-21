@@ -1,24 +1,34 @@
-module.exports = function (migration) {
-  const job = migration.createContentType('job')
+const { upsertContentType, upsertField } = require('./utils')
+
+module.exports = async function(migration) {
+  const job = await upsertContentType(migration, 'job')
+  const title = await upsertField(job, 'title')
+  const slug = await upsertField(job, 'slug')
+  const body = await upsertField(job, 'body')
+
+  job
     .name('Job')
+    .description('Job Position')
     .displayField('title')
 
-  job.createField('title')
+  title
     .type('Symbol')
     .required(true)
     .name('Title')
     .validations([{ unique: true }])
 
-  job.createField('slug')
+  slug
     .type('Symbol')
     .required(true)
     .name('Slug')
     .validations([{ unique: true }])
 
-  job.changeFieldControl('slug', 'builtin', 'slugEditor')
-
-  job.createField('body')
+  body
     .type('RichText')
     .required(true)
     .name('Body')
+
+  job.changeFieldControl('slug', 'builtin', 'slugEditor', {
+    helpText: 'It will be used for the URL: /jobs/<slug>',
+  })
 }

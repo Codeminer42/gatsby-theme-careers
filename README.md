@@ -5,7 +5,11 @@
 ## Install
 
 ```sh
+git clone https://github.com/iagodahlem/careers
+cd careers
+cp .env.example .env
 yarn
+yarn migrate
 ```
 
 ## Run
