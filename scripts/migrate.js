@@ -9,18 +9,22 @@ const options = {
 }
 
 const migrate = async () => {
-  await runMigration({
-    ...options,
-    filePath: path.resolve('./migrations/01-create-job-type.js'),
-  })
-  await runMigration({
-    ...options,
-    filePath: path.resolve('./migrations/02-create-tag-type.js'),
-  })
-  await runMigration({
-    ...options,
-    filePath: path.resolve('./migrations/03-job-tag-many-association.js'),
-  })
+  try {
+    await runMigration({
+      ...options,
+      filePath: path.resolve('./migrations/01-create-job-type.js'),
+    })
+    await runMigration({
+      ...options,
+      filePath: path.resolve('./migrations/02-create-tag-type.js'),
+    })
+    await runMigration({
+      ...options,
+      filePath: path.resolve('./migrations/03-job-tag-many-association.js'),
+    })
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 migrate()
