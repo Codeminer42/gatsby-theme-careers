@@ -20,7 +20,7 @@ module.exports = {
     try {
       await getContentType(contentTypeId)
       return migration.editContentType(contentTypeId)
-    } catch (_) {
+    } catch {
       return migration.createContentType(contentTypeId)
     }
   },
@@ -32,7 +32,7 @@ module.exports = {
         return contentType.editField(fieldId)
       }
       throw new Error(`Field ${fieldId} does not exist.`)
-    } catch (_) {
+    } catch {
       return contentType.createField(fieldId)
     }
   },
