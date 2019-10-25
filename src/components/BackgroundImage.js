@@ -27,7 +27,7 @@ const BackgroundImage = ({ src, ...props }) => {
   )
 
   const imageStack = [
-    'linear-gradient(to right, rgba(1,1,1,.6), rgba(1,1,1,.6))',
+    'linear-gradient(to right, rgba(1,1,1,.7), rgba(1,1,1,.7))',
     image.node.childImageSharp.fluid,
   ]
 

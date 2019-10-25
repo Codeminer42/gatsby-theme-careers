@@ -13,11 +13,13 @@
 const colors = {
   black: '#010101',
   white: '#ffffff',
-  red: '#CD0E0F',
+  red: '#cd0e0f',
+  gray: '#e9e9e9',
 }
 
 const sizes = {
-  header: '90px',
+  header: '70px',
+  hero: '450px',
 }
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
@@ -32,6 +34,10 @@ const fontSizes = [0, 12, 14, 16, 21, 28, 37, 50, 67, 89, 119, 159].map(
 
 const fontWeights = [0, 400, 500, 600, 700]
 
+const borders = {
+  jobs: `1px solid ${colors.gray}`,
+}
+
 const theme = {
   colors,
   sizes,
@@ -39,6 +45,7 @@ const theme = {
   fonts,
   fontSizes,
   fontWeights,
+  borders,
 }
 
 export default theme

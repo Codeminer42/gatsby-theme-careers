@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@styled-system/css": "^5.0.23",
     "babel-plugin-styled-components": "^1.10.6",
     "contentful-migration": "^1.0.2",
     "dotenv": "^8.1.0",
     "flokit": "^1.0.0-alpha.1",
+    "gatsby": "^2.15.28",
     "gatsby-background-image": "^0.8.15",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-react-helmet": "^3.1.10",
@@ -26,11 +28,10 @@
     "gatsby-source-filesystem": "^2.1.29",
     "gatsby-transformer-json": "^2.2.12",
     "gatsby-transformer-sharp": "^2.2.20",
-    "gatsby": "^2.15.28",
     "prop-types": "^15.7.2",
+    "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react": "^16.9.0",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {

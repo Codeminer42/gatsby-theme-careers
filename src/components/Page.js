@@ -1,8 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import GlobalStyle from './GlobalStyle'
+import { GlobalStyle, Layout } from './'
 
-const Page = ({ children }) => (
+const Page = ({ children, pageContext }) => (
   <>
     <Helmet defer={false}>
       <link
@@ -13,7 +13,9 @@ const Page = ({ children }) => (
 
     <GlobalStyle />
 
-    {children}
+    <Layout layout={pageContext.layout}>
+      {children}
+    </Layout>
   </>
 )
 

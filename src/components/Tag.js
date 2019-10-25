@@ -1,16 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { Text } from 'flokit'
 
-const propTypes = {
-  name: PropTypes.string.isRequired
+const Tag = styled(Text)``
+
+Tag.defaultProps = {
+  as: 'span',
+  fontSize: '3',
+  fontWeight: '3',
+  color: '#37352f',
+  opacity: '.5',
 }
-
-const Tag = ({ name }) => {
-  return (
-    <span>{name}</span>
-  )
-}
-
-Tag.propTypes = propTypes
 
 export default Tag
