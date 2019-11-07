@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import css from '@styled-system/css'
 import { graphql } from 'gatsby'
 import { Box, Heading, Text } from 'flokit'
@@ -28,7 +27,7 @@ const IndexPage = ({ data }) => {
                   },
                 })}
               >
-                <Link to={`/jobs/${job.slug}`}>
+                <Link to={`/jobs/${job.slug}`} display='block'>
                   <Heading as='h3' marginBottom='2' fontSize={['4', '5']}>
                     {job.title}
                   </Heading>

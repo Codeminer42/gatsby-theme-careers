@@ -7,8 +7,7 @@ Tag.defaultProps = {
   as: 'span',
   fontSize: '3',
   fontWeight: '3',
-  color: '#37352f',
-  opacity: '.5',
+  color: 'accent',
 }
 
 export default Tag

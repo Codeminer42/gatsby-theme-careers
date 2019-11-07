@@ -34,6 +34,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: JobTemplate,
       context: {
         slug: node.slug,
+        layout: 'job',
       },
     })
   })

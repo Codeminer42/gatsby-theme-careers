@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { themeGet } from '@styled-system/theme-get'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -18,10 +19,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: ${(props) => props.theme.fonts.body};
-    font-size: ${(props) => props.theme.fontSizes[3]};
-    color: ${(props) => props.theme.colors.black};
-    background-color: ${(props) => props.theme.colors.white};
+    font-family: ${themeGet('fonts.body')};
+    font-size: ${themeGet('fontSizes.3')};
+    font-weight: ${themeGet('fontWeights.2')};
+    color: ${themeGet('colors.black')};
+    background-color: ${themeGet('colors.white')};
   }
 `
 
