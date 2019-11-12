@@ -35,11 +35,15 @@ const Job = ({ data }) => {
           <JobContentStyle />
 
           {job.body && documentToReactComponents(job.body.json)}
+
+          <Button width='240px' marginTop='5'>
+            Apply
+          </Button>
         </Box>
 
-        <Box as='aside' width={[1, 1 / 3, 1 / 4]} paddingLeft='3'>
+        {/* <Box as='aside' width={[1, 1 / 3, 1 / 4]} paddingLeft='3'>
           <Button width={1}>Apply</Button>
-        </Box>
+        </Box> */}
       </Flex>
     </Container>
   )
