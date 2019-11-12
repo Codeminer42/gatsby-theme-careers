@@ -18,7 +18,13 @@ const Job = ({ data }) => {
         marginBottom='5'
         paddingRight='3'
       >
-        <Heading marginBottom='3' fontSize='9' fontWeight='4' color='black'>
+        <Heading
+          as='h1'
+          marginBottom='3'
+          fontSize='9'
+          fontWeight='4'
+          color='black'
+        >
           {job.title}
         </Heading>
 
