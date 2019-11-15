@@ -2,7 +2,7 @@ import React from 'react'
 import css from '@styled-system/css'
 import { graphql } from 'gatsby'
 import { Box, Heading, Text } from 'flokit'
-import { Container, Link, List, TagList } from '../components'
+import { Bold, Container, Link, List, TagList } from '../components'
 
 const IndexPage = ({ data }) => {
   const { jobs } = data
@@ -10,6 +10,16 @@ const IndexPage = ({ data }) => {
 
   return (
     <Container>
+      <Box marginBottom='5'>
+        <Text fontSize='4'>
+          <Bold>Codeminer42</Bold> is a Brazilian software boutique focused on
+          delivering the best value for its customers. We started operating in{' '}
+          <Bold>September 2011</Bold> and so far we have expanded to{' '}
+          <Bold>12 different cities in Brazil</Bold> with the best professionals
+          and developers we can find.
+        </Text>
+      </Box>
+
       {hasJobs ? (
         <List>
           {jobs.edges.map((edge) => {

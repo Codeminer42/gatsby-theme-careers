@@ -1,4 +1,5 @@
 export { default as BackgroundImage } from './BackgroundImage'
+export { default as Bold } from './Bold'
 export { default as Button } from './Button'
 export { default as Container } from './Container'
 export { default as Footer } from './Footer'

@@ -30,7 +30,7 @@ const Hero = () => (
         textShadow='0 3px 8px rgba(0,0,0,.4)'
         color='white'
       >
-        Join our team spread across 11 offices in Brazil.
+        Join our team spread across 12 cities in Brazil.
       </Text>
     </Container>
 
