@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-theme-careers",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iagodahlem/gatsby-theme-careers",
+  "author": "iagodahlem <iagodahlemlorensini@gmail.com> (@iagodahlem)",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "yarn develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  }
+}

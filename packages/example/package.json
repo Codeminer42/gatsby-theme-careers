@@ -1,0 +1,40 @@
+{
+  "name": "example",
+  "private": true,
+  "version": "0.0.0",
+  "author": "iagodahlem <iagodahlemlorensini@gmail.com> (@iagodahlem)",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "yarn develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@styled-system/css": "^5.0.23",
+    "@styled-system/theme-get": "^5.1.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "contentful-migration": "^1.0.2",
+    "dotenv": "^8.1.0",
+    "flokit": "^1.0.0-alpha.1",
+    "gatsby": "^2.15.28",
+    "gatsby-background-image": "^0.8.18",
+    "gatsby-image": "^2.2.24",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.28",
+    "gatsby-plugin-styled-components": "^3.1.8",
+    "gatsby-source-contentful": "^2.1.45",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-transformer-json": "^2.2.12",
+    "gatsby-transformer-sharp": "^2.2.20",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.4.0"
+  }
+}
