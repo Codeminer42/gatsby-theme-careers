@@ -25,15 +25,15 @@ module.exports = {
     }
   },
 
-  async upsertField(contentType, fieldId) {
+  async upsertField(contentType, fieldId, options = {}) {
     try {
       const ct = await getContentType(contentType.id)
       if (ct.fields.some((fld) => fld.id === fieldId)) {
-        return contentType.editField(fieldId)
+        return contentType.editField(fieldId, options)
       }
       throw new Error(`Field ${fieldId} does not exist.`)
     } catch {
-      return contentType.createField(fieldId)
+      return contentType.createField(fieldId, options)
     }
   },
 }
