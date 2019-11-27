@@ -12,6 +12,9 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
+  "dependencies": {
+    "gatsby-source-contentful": "^2.1.64"
+  },
   "peerDependencies": {
     "gatsby": "^2.18.4",
     "react": "^16.12.0",
