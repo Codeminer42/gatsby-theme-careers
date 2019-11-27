@@ -1,5 +1,20 @@
 import React from 'react'
+import Jobs from '../components/Jobs'
 
-const Jobs = () => <p>Jobs</p>
+export default ({ data }) => <Jobs jobs={data.jobs.edges} />
 
-export default Jobs
+export const query = graphql`
+  query JobsQuery {
+    jobs: allContentfulJob(sort: { order: ASC, fields: [slug] }) {
+      edges {
+        node {
+          slug
+          title
+          tags {
+            name
+          }
+        }
+      }
+    }
+  }
+`

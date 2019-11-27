@@ -1,5 +1,18 @@
 import React from 'react'
+import Job from '../components/Job'
 
-const Job = () => <p>Job</p>
+export default ({ data }) => <Job job={data.job} />
 
-export default Job
+export const query = graphql`
+  query JobQuery($slug: String!) {
+    job: contentfulJob(slug: { eq: $slug }) {
+      title
+      body {
+        json
+      }
+      tags {
+        name
+      }
+    }
+  }
+`

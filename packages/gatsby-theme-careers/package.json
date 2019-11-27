@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "gatsby-source-contentful": "^2.1.64"
   },
   "peerDependencies": {
