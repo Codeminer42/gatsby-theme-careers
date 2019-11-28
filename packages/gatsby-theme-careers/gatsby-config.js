@@ -1,6 +1,11 @@
-module.exports = ({ basePath = '/', spaceId, accessToken } = {}) => ({
+module.exports = ({
+  basePath = '/',
+  title = 'Gatsby Theme Careers',
+  spaceId,
+  accessToken,
+} = {}) => ({
   siteMetadata: {
-    title: 'Gatsby Theme Careers',
+    title,
     basePath,
   },
   plugins: [
