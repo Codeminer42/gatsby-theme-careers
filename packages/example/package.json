@@ -9,8 +9,7 @@
     "start": "yarn develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "dotenv": "^8.1.0",
