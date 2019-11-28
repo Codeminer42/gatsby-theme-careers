@@ -1,3 +1,11 @@
+const migrate = require('./scripts/migrate')
+
+exports.onPreBootstrap = async ({ reporter }, options) => {
+  reporter.log('Running migrations')
+
+  await migrate(options)
+}
+
 exports.createPages = async ({ actions, graphql, reporter }, options = {}) => {
   const { basePath = '/' } = options
   const { createPage } = actions
@@ -20,7 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options = {}) => {
   `)
 
   if (result.errors) {
-    reporter.panic('Error loading jobs.', result.errors)
+    reporter.panic('Error loading jobs', result.errors)
     return
   }
 

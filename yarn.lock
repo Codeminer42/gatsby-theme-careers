@@ -3107,7 +3107,7 @@ contentful-management@^5.9.0:
     contentful-sdk-core "^6.4.0"
     lodash "^4.17.11"
 
-contentful-migration@^1.0.2:
+contentful-migration@^1.0.2, contentful-migration@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-1.0.6.tgz#bb0dc7fd6f417203390ab6c9e7fc51a518a4ee7e"
   integrity sha512-HBNft1zxA9FPaSyg34C0WwM/ZC+JhMgEv+9Y5NbNCnaAvxHZklfLr47s6cIH+CIUHaco0ExWI814Isb2C/saHg==

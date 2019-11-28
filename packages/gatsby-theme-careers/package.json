@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "contentful-migration": "^1.0.6",
     "gatsby-source-contentful": "^2.1.64"
   },
   "peerDependencies": {
