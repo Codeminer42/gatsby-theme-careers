@@ -40,7 +40,7 @@ This project makes use of Yarn workspaces. To install its dependencies you will 
 > pull requests from branches on your fork. To do this, run:
 >
 > ```sh
-> git remote add upstream https://github.com/kefranabg/gatsby-theme-careers.git
+> git remote add upstream https://github.com/iagodahlem/gatsby-theme-careers.git
 > git fetch upstream
 > git branch --set-upstream-to=upstream/master master
 > ```
