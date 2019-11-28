@@ -6,16 +6,18 @@
   "author": "iagodahlem <iagodahlemlorensini@gmail.com> (@iagodahlem)",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "yarn develop",
-    "build": "gatsby build",
-    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@styled-system/css": "^5.0.23",
+    "@styled-system/theme-get": "^5.1.2",
+    "babel-plugin-styled-components": "^1.10.6",
     "contentful-migration": "^1.0.6",
-    "gatsby-source-contentful": "^2.1.64"
+    "flokit": "^1.0.0-alpha.1",
+    "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-source-contentful": "^2.1.64",
+    "styled-components": "^4.4.1"
   },
   "peerDependencies": {
     "gatsby": "^2.18.4",

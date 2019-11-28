@@ -4,6 +4,7 @@ module.exports = ({ basePath = '/', spaceId, accessToken } = {}) => ({
     basePath,
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-contentful',
       options: {

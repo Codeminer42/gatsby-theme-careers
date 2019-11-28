@@ -1,19 +1,26 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Box, Heading } from 'flokit'
+import Layout from './Layout'
+import List from './List'
+import Link from './Link'
 import TagList from './TagList'
 
 const Jobs = ({ jobs }) => (
-  <ul>
-    {jobs.map(({ node: job }) => (
-      <li key={job.slug}>
-        <Link to={`/jobs/${job.slug}`}>
-          <h3>{job.title}</h3>
-        </Link>
+  <Layout>
+    <List>
+      {jobs.map(({ node: job }) => (
+        <Box as='li' key={job.slug} paddingBottom='4'>
+          <Link to={`/jobs/${job.slug}`} display='block'>
+            <Heading as='h2' marginBottom='2' fontSize='5'>
+              {job.title}
+            </Heading>
+          </Link>
 
-        <TagList tags={job.tags} />
-      </li>
-    ))}
-  </ul>
+          <TagList tags={job.tags} />
+        </Box>
+      ))}
+    </List>
+  </Layout>
 )
 
 export default Jobs
