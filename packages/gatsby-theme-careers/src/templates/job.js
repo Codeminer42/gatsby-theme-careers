@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Job from '../components/Job'
 
 export default ({ data }) => <Job job={data.job} />
