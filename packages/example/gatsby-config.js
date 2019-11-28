@@ -1,28 +1,14 @@
 require('dotenv').config()
 
 module.exports = {
-  siteMetadata: {
-    title: 'Careers | CompanyName',
-    description: '',
-    author: '',
-  },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-contentful',
+      resolve: 'gatsby-theme-careers',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_CONTENT_API_ACCESS_TOKEN,
+        managementToken: process.env.CONTENTFUL_CONTENT_MANAGEMENT_TOKEN,
+        environmentId: process.env.CONTENTFUL_ENVIRONMENT_ID,
         downloadLocal: true,
       },
     },
