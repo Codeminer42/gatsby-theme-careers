@@ -5,6 +5,8 @@
     "packages/*"
   ],
   "scritps": {
+    "start:example": "yarn workspace example start",
+    "build:example": "yarn workspace example build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "devDependencies": {
