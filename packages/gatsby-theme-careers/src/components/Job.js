@@ -4,23 +4,31 @@ import { Box, Heading } from 'flokit'
 import Layout from './Layout'
 import TagList from './TagList'
 import Button from './Button'
+import SEO from './SEO'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
-const Job = ({ job }) => (
-  <Layout>
-    <Box as='header' width={1} marginBottom='5' paddingRight='3'>
-      <Heading as='h1' marginBottom='3' fontSize='8' fontWeight='4'>
-        {job.title}
-      </Heading>
+const Job = ({ job }) => {
+  const meta = useSiteMetadata()
 
-      <TagList tags={job.tags} />
-    </Box>
+  return (
+    <Layout>
+      <SEO {...meta} title={`${job.title} | ${meta.title}`} />
 
-    <article>
-      {job.body && documentToReactComponents(job.body.json)}
+      <Box as='header' width={1} marginBottom='5' paddingRight='3'>
+        <Heading as='h1' marginBottom='3' fontSize='8' fontWeight='4'>
+          {job.title}
+        </Heading>
 
-      <Button marginTop='5'>Apply</Button>
-    </article>
-  </Layout>
-)
+        <TagList tags={job.tags} />
+      </Box>
+
+      <article>
+        {job.body && documentToReactComponents(job.body.json)}
+
+        <Button marginTop='5'>Apply</Button>
+      </article>
+    </Layout>
+  )
+}
 
 export default Job

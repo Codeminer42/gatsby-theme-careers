@@ -44,6 +44,7 @@ module.exports = {
 | :---------------- | :------- | :--------------------------------------------------------- | :------- |
 | `basePath`        | `string` | The base path where your site will live. (e.g. `/careers`) | `false`  |
 | `title`           | `string` | The main title used in the header                          | `false`  |
+| `description`     | `string` | The main site description                                  | `false`  |
 | `spaceId`         | `string` | Your Contentful space ID                                   | `true`   |
 | `accessToken`     | `string` | Your Contentful content delivery API access token          | `true`   |
 | `managementToken` | `string` | Your Contentful personal access                            | `true`   |
