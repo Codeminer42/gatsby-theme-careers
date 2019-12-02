@@ -6,7 +6,6 @@ import Header from './Header'
 import Main from './Main'
 import Container from './Container'
 import Link from './Link'
-import SEO from './SEO'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import theme from '../theme'
 
@@ -15,8 +14,6 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <SEO {...meta} />
-
       <GlobalStyle />
 
       <Header>
