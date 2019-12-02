@@ -3,6 +3,7 @@ module.exports = ({
   title = 'Gatsby Theme Careers',
   spaceId,
   accessToken,
+  googleAnalyticsOptions,
 } = {}) => ({
   siteMetadata: {
     title,
@@ -16,6 +17,15 @@ module.exports = ({
         downloadLocal: true,
         spaceId,
         accessToken,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        //All options available https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/#how-to-use
+        ...googleAnalyticsOptions,
       },
     },
   ],
