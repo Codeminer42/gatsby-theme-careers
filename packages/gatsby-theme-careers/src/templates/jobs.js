@@ -4,10 +4,10 @@ import SEO from '../components/SEO'
 import Jobs from '../components/Jobs'
 
 export default ({ data }) => (
-  <React.Fragment>
+  <>
     <SEO />
     <Jobs jobs={data.jobs.edges} />
-  </React.Fragment>
+  </>
 )
 
 export const query = graphql`

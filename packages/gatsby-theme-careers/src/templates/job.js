@@ -7,10 +7,10 @@ export default ({ data }) => {
   const { job } = data
 
   return (
-    <React.Fragment>
-      <SEO titleTemplate={`${job.title} | %s`} />
+    <>
+      <SEO title={job.title} />
       <Job job={job} />
-    </React.Fragment>
+    </>
   )
 }
 
