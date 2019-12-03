@@ -3,7 +3,6 @@ module.exports = ({
   title = 'Gatsby Theme Careers',
   spaceId,
   accessToken,
-  googleAnalyticsOptions,
   mailTo,
 } = {}) => ({
   siteMetadata: {
