@@ -34,22 +34,29 @@ module.exports = {
         accessToken: '',
         managementToken: '',
         environmentId: '',
+        mailTo: 'become@jobs.com',
+        googleAnalyticsOptions: {...}
       },
     },
   ],
 }
 ```
 
-| Option Name       | Type     | Description                                                | Required |
-| :---------------- | :------- | :--------------------------------------------------------- | :------- |
-| `basePath`        | `string` | The base path where your site will live. (e.g. `/careers`) | `false`  |
-| `title`           | `string` | The main title used in the header                          | `false`  |
-| `spaceId`         | `string` | Your Contentful space ID                                   | `true`   |
-| `accessToken`     | `string` | Your Contentful content delivery API access token          | `true`   |
-| `managementToken` | `string` | Your Contentful personal access                            | `true`   |
-| `environmentId`   | `string` | Your Contentful environment ID. (e.g. `master`)            | `true`   |
+| Option Name              | Type     | Description                                                | Required |
+| :----------------------- | :------- | :--------------------------------------------------------- | :------- |
+| `basePath`               | `string` | The base path where your site will live. (e.g. `/careers`) | `false`  |
+| `title`                  | `string` | The main title used in the header                          | `false`  |
+| `spaceId`                | `string` | Your Contentful space ID                                   | `true`   |
+| `accessToken`            | `string` | Your Contentful content delivery API access token          | `true`   |
+| `managementToken`        | `string` | Your Contentful personal access                            | `true`   |
+| `environmentId`          | `string` | Your Contentful environment ID. (e.g. `master`)            | `true`   |
+| `mailTo`                 | `string` | The e-mail address for people apply                        | `true`   |
+| `googleAnalyticsOptions` | `object` | Your Google Analytics options                              | `false`  |
 
 Create your Contentful space, generate all the needed api keys and fill them in.
+
+📊 :Google Analytics is optional, however by default this is placed on body and you **must** pass the key `trackingId` to have the GA script included.
+All options are available on this [link](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/#how-to-use).
 
 ## 🔥 Running
 

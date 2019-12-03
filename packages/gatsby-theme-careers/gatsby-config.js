@@ -4,10 +4,12 @@ module.exports = ({
   spaceId,
   accessToken,
   googleAnalyticsOptions,
+  mailTo,
 } = {}) => ({
   siteMetadata: {
     title,
     basePath,
+    mailTo,
   },
   plugins: [
     'gatsby-plugin-styled-components',
