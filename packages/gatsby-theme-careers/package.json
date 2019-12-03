@@ -16,6 +16,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "contentful-migration": "^1.0.6",
     "flokit": "^1.0.0-alpha.1",
+    "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-styled-components": "^3.1.14",
     "gatsby-source-contentful": "^2.1.64",
     "styled-components": "^4.4.1"
