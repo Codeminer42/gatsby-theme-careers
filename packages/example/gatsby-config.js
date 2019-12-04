@@ -10,6 +10,7 @@ module.exports = {
         managementToken: process.env.CONTENTFUL_CONTENT_MANAGEMENT_TOKEN,
         environmentId: process.env.CONTENTFUL_ENVIRONMENT_ID,
         downloadLocal: true,
+        mailTo: 'become@jobs.com'
       },
     },
   ],

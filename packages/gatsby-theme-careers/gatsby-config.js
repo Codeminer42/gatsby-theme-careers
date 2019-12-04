@@ -3,10 +3,12 @@ module.exports = ({
   title = 'Gatsby Theme Careers',
   spaceId,
   accessToken,
+  mailTo,
 } = {}) => ({
   siteMetadata: {
     title,
     basePath,
+    mailTo,
   },
   plugins: [
     'gatsby-plugin-styled-components',
