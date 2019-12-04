@@ -48,11 +48,11 @@ module.exports = {
 | `accessToken`            | `string` | Your Contentful content delivery API access token          | `true`   |
 | `managementToken`        | `string` | Your Contentful personal access                            | `true`   |
 | `environmentId`          | `string` | Your Contentful environment ID. (e.g. `master`)            | `true`   |
-| `googleAnalyticsOptions` | `object` | Your Google Analytics options                              | `false`  |
+| `googleAnalytics` | `object` | Your Google Analytics options                              | `false`  |
 
 Create your Contentful space, generate all the needed api keys and fill them in.
 
-📊 Google Analytics is an optional feature if you really want to include analytics scripts in your site, you **must** pass the `trackingId` key to the `googleAnalyticsOptions` object.
+📊 Google Analytics is an optional feature if you really want to include analytics scripts in your site, you **must** pass the `trackingId` key to the `googleAnalytics` object.
 
 Check all the options available at the gatsby-plugin-google-analytics [documentation](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/#how-to-use).
 
