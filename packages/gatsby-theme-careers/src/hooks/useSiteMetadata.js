@@ -7,6 +7,7 @@ const useSiteMetadata = () => {
         siteMetadata {
           title
           basePath
+          mailTo
         }
       }
     }

@@ -2,13 +2,12 @@ import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Box, Heading } from 'flokit'
 import Layout from './Layout'
+import ApplyButton from './ApplyButton'
 import TagList from './TagList'
-import Button from './Button'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const Job = ({ job }) => {
   const { mailTo } = useSiteMetadata()
-  const mail = `mailto:${mailTo}?subject${job.title}`
 
   return (
     <Layout>
@@ -23,11 +22,7 @@ const Job = ({ job }) => {
       <article>
         {job.body && documentToReactComponents(job.body.json)}
 
-        {mailTo && (
-          <Button as='a' title='Send an email' href={mail} marginTop='5'>
-            Apply
-          </Button>
-        )}
+        <ApplyButton mailTo={mailTo} subject={job.title} marginTop='5' />
       </article>
     </Layout>
   )
