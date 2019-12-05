@@ -21,5 +21,11 @@ module.exports = ({
         accessToken,
       },
     },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: `${__dirname}/src/images/favicon.png`
+      }
+    },
   ],
 })
