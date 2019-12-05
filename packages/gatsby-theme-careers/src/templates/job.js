@@ -23,6 +23,7 @@ export const query = graphql`
       }
       tags {
         name
+        slug
       }
     }
   }

@@ -23,6 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options = {}) => {
             slug
           }
         }
+        tags: distinct(field: tags___slug)
       }
     }
   `)
@@ -33,6 +34,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options = {}) => {
   }
 
   const jobs = result.data.allContentfulJob.edges
+  const tags = result.data.allContentfulJob.tags
 
   jobs.forEach(({ node }) => {
     const { slug } = node
@@ -43,6 +45,17 @@ exports.createPages = async ({ actions, graphql, reporter }, options = {}) => {
       context: {
         slug,
         layout: 'job',
+      },
+    })
+  })
+
+  tags.forEach((slug) => {
+    createPage({
+      path: `/tags/${slug}`,
+      component: require.resolve('./src/templates/tag.js'),
+      context: {
+        slug,
+        layout: 'tag',
       },
     })
   })
