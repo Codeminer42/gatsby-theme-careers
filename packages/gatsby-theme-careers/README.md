@@ -30,11 +30,11 @@ module.exports = {
     {
       resolve: 'gatsby-theme-careers',
       options: {
+        mailTo: 'become@jobs.com',
         spaceId: '',
         accessToken: '',
         managementToken: '',
         environmentId: '',
-        mailTo: 'become@jobs.com',
       },
     },
   ],
@@ -45,11 +45,11 @@ module.exports = {
 | :----------------------- | :------- | :--------------------------------------------------------- | :------- |
 | `basePath`               | `string` | The base path where your site will live. (e.g. `/careers`) | `false`  |
 | `title`                  | `string` | The main title used in the header                          | `false`  |
+| `mailTo`                 | `string` | The e-mail address for people apply                        | `true`   |
 | `spaceId`                | `string` | Your Contentful space ID                                   | `true`   |
 | `accessToken`            | `string` | Your Contentful content delivery API access token          | `true`   |
 | `managementToken`        | `string` | Your Contentful personal access                            | `true`   |
 | `environmentId`          | `string` | Your Contentful environment ID. (e.g. `master`)            | `true`   |
-| `mailTo`                 | `string` | The e-mail address for people apply                        | `true`   |
 
 Create your Contentful space, generate all the needed api keys and fill them in.
 

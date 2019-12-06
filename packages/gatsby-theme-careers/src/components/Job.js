@@ -22,7 +22,7 @@ const Job = ({ job }) => {
       <article>
         {job.body && documentToReactComponents(job.body.json)}
 
-        <ApplyButton mailTo={mailTo} subject={job.title} marginTop='5' />
+        <ApplyButton mailTo={`${mailTo}?subject=${subject}`} marginTop='5' />
       </article>
     </Layout>
   )
