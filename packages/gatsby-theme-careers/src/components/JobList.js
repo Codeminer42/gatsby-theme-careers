@@ -40,4 +40,4 @@ const JobList = ({ jobs }) => (
     </List>
 )
 
-export default JobLis
+export default JobList
